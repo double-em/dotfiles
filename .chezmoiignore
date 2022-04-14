@@ -6,5 +6,5 @@ PowerShell
 {{- end }}
 
 {{- if ne .chezmoi.os "linux" }}
-.config
+dot_config
 {{- end }}
