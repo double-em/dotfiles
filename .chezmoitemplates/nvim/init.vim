@@ -60,26 +60,6 @@ Plug 'bbenzikry/snazzybuddy.nvim'
 " Enable the color scheme
 colorscheme snazzybuddy
 
-" vim.opt.list = true
-" vim.opt.listchars:append("space:⋅")
-" vim.opt.listchars:append("eol:↴")
-" 
-" require("indent_blankline").setup {
-"     space_char_blankline = " ",
-"     show_current_context = true,
-"     show_current_context_start = true,
-" }
-" 
-" let g:snazzybuddy_icons = v:true
-" 
-" " Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
-" local indent_colors = {}
-" for i = 1, 7 do
-"     table.insert(indent_colors, 'SnazzyIndent' .. i)
-" end
-" 
-" vim.g.indent_blankline_char_highlight_list = indent_colors
-
 call plug#end()
 
 " Settings:
@@ -154,11 +134,6 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'completor': function('asyncomplete#sources#emmet#completor'),
     \ }))
 
-require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
-}
-
 " Colors:
 augroup ColorschemePreferences
   autocmd!
@@ -171,6 +146,38 @@ augroup ColorschemePreferences
   autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
   autocmd ColorScheme * highlight link ALEInfoSign    Identifier
 augroup END
+
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
+
+let g:indent_blankline_show_current_context = v:true
+let g:indent_blankline_show_current_context_start = v:true
+let g:indent_blankline_space_char_blankline = ' '
+
+let g:snazzybuddy_icons = v:true
+local indent_colors = {}
+for i = 1, 7 do
+    table.insert(indent_colors, 'SnazzyIndent' .. i)
+end
+
+let g:indent_blankline_char_highlight_list = indent_colors
+
+" require("indent_blankline").setup {
+"     space_char_blankline = " ",
+"     show_current_context = true,
+"     show_current_context_start = true,
+" }
+" 
+" let g:snazzybuddy_icons = v:true
+" 
+" " Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
+" local indent_colors = {}
+" for i = 1, 7 do
+"     table.insert(indent_colors, 'SnazzyIndent' .. i)
+" end
+" 
+" vim.g.indent_blankline_char_highlight_list = indent_colors
 
 " Use truecolor in the terminal, when it is supported
 if has('termguicolors')
