@@ -43,7 +43,7 @@ if has('python3')
 endif
 
 " Colorscheme
-Plug 'gruvbox-community/gruvbox'
+" Plug 'gruvbox-community/gruvbox'
 
 " Statusline
 Plug 'itchyny/lightline.vim'
