@@ -175,9 +175,9 @@ EOF
 colorscheme snazzybuddy
 
 " Use truecolor in the terminal, when it is supported
-if has('termguicolors')
-  set termguicolors
-endif
+" if has('termguicolors')
+"   set termguicolors
+" endif
 
 " set background=dark
 
