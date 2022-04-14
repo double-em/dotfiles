@@ -58,7 +58,6 @@ Plug 'tjdevries/colorbuddy.nvim'
 Plug 'bbenzikry/snazzybuddy.nvim'
 
 " Enable the color scheme
-colorscheme snazzybuddy
 
 call plug#end()
 
@@ -154,8 +153,8 @@ require('colorbuddy').colorscheme('snazzybuddy')
 vim.g.snazzybuddy_icons = true
 
 vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
+-- vim.opt.listchars:append("space:⋅")
+-- vim.opt.listchars:append("eol:↴")
 
 -- let g:indent_blankline_show_current_context = v:true
 -- let g:indent_blankline_show_current_context_start = v:true
@@ -187,6 +186,8 @@ end
 vim.g.indent_blankline_char_highlight_list = indent_colors
 
 EOF
+
+colorscheme snazzybuddy
 
 " Use truecolor in the terminal, when it is supported
 if has('termguicolors')
