@@ -154,12 +154,14 @@ vim.opt.listchars:append("eol:↴")
 let g:indent_blankline_show_current_context = v:true
 let g:indent_blankline_show_current_context_start = v:true
 let g:indent_blankline_space_char_blankline = ' '
+let g:indent_blankline_space_char_highlight_list = ['⋅']
+let g:indent_blankline_leading_space_char = '·'
 
 let g:snazzybuddy_icons = v:true
 local indent_colors = {}
 for i = 1, 7 do
     table.insert(indent_colors, 'SnazzyIndent' .. i)
-end
+:endfor
 
 let g:indent_blankline_char_highlight_list = indent_colors
 
