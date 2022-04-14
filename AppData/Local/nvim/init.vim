@@ -50,6 +50,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 
+Plug 'tjdevries/colorbuddy.nvim'
+Plug 'bbenzikry/snazzybuddy.nvim'
+
+" Enable the color scheme
+colorscheme snazzybuddy
+
 call plug#end()
 " }}}
 
@@ -146,7 +152,6 @@ if has('termguicolors')
 endif
 
 set background=dark
-colorscheme gruvbox
 " }}}
 
 let g:OmniSharp_server_use_net6 = 1
