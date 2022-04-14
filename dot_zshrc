@@ -21,6 +21,8 @@ zinit light-mode for \
 
 ## End of Zinit's installer chunk
 
+chezmoi update
+
 setopt promptsubst
 PS1="READY >" # provide a simple prompt till the theme loads
 
