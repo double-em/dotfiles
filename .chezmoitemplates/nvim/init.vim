@@ -56,10 +56,10 @@ Plug 'kyazdani42/nvim-web-devicons'
 Plug 'tjdevries/colorbuddy.nvim'
 Plug 'bbenzikry/snazzybuddy.nvim'
 
-call plug#end()
-
 " Enable the color scheme
 colorscheme snazzybuddy
+
+all plug#end()
 
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
