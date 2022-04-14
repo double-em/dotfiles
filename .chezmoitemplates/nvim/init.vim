@@ -11,7 +11,8 @@ set fileencodings=utf-8,latin
 set encoding=utf-8
 
 " vim-plug:
-call plug#begin('~/AppData/Local/nvim/plugged')
+" call plug#begin('~/AppData/Local/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
  
 Plug 'OmniSharp/omnisharp-vim'
 
