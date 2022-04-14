@@ -50,13 +50,36 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+
 Plug 'tjdevries/colorbuddy.nvim'
 Plug 'bbenzikry/snazzybuddy.nvim'
+
+call plug#end()
 
 " Enable the color scheme
 colorscheme snazzybuddy
 
-call plug#end()
+vim.opt.list = true
+vim.opt.listchars:append("space:⋅")
+vim.opt.listchars:append("eol:↴")
+
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+
+let g:snazzybuddy_icons = v:true
+
+" Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
+local indent_colors = {}
+for i = 1, 7 do
+    table.insert(indent_colors, 'SnazzyIndent' .. i)
+end
+
+vim.g.indent_blankline_char_highlight_list = indent_colors
 
 " Settings:
 filetype indent plugin on
