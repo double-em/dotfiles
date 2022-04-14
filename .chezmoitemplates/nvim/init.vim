@@ -100,7 +100,7 @@ set laststatus=2
 " set noshowmode
 " set signcolumn=yes
 
-set background=dark
+" set background=dark
 
 set nobackup
 set showcmd
@@ -155,21 +155,6 @@ vim.g.snazzybuddy_icons = true
 vim.opt.list = true
 -- vim.opt.listchars:append("space:⋅")
 -- vim.opt.listchars:append("eol:↴")
-
--- let g:indent_blankline_show_current_context = v:true
--- let g:indent_blankline_show_current_context_start = v:true
--- let g:indent_blankline_space_char_blankline = ' '
--- let g:indent_blankline_space_char_highlight_list = ['⋅']
--- let g:indent_blankline_leading_space_char = '·'
-
--- let g:snazzybuddy_icons = v:true
--- 
--- local indent_colors = {}
--- for i = 1, 7 do
---     table.insert(indent_colors, 'SnazzyIndent' .. i)
--- end
--- 
--- let g:indent_blankline_char_highlight_list = indent_colors
 
 require("indent_blankline").setup {
     space_char_blankline = " ",
