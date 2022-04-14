@@ -60,25 +60,25 @@ Plug 'bbenzikry/snazzybuddy.nvim'
 " Enable the color scheme
 colorscheme snazzybuddy
 
-vim.opt.list = true
-vim.opt.listchars:append("space:⋅")
-vim.opt.listchars:append("eol:↴")
-
-require("indent_blankline").setup {
-    space_char_blankline = " ",
-    show_current_context = true,
-    show_current_context_start = true,
-}
-
-let g:snazzybuddy_icons = v:true
-
-" Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
-local indent_colors = {}
-for i = 1, 7 do
-    table.insert(indent_colors, 'SnazzyIndent' .. i)
-end
-
-vim.g.indent_blankline_char_highlight_list = indent_colors
+" vim.opt.list = true
+" vim.opt.listchars:append("space:⋅")
+" vim.opt.listchars:append("eol:↴")
+" 
+" require("indent_blankline").setup {
+"     space_char_blankline = " ",
+"     show_current_context = true,
+"     show_current_context_start = true,
+" }
+" 
+" let g:snazzybuddy_icons = v:true
+" 
+" " Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
+" local indent_colors = {}
+" for i = 1, 7 do
+"     table.insert(indent_colors, 'SnazzyIndent' .. i)
+" end
+" 
+" vim.g.indent_blankline_char_highlight_list = indent_colors
 
 call plug#end()
 
@@ -153,6 +153,11 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
     \ 'whitelist': ['html'],
     \ 'completor': function('asyncomplete#sources#emmet#completor'),
     \ }))
+
+require("indent_blankline").setup {
+    show_current_context = true,
+    show_current_context_start = true,
+}
 
 " Colors:
 augroup ColorschemePreferences
