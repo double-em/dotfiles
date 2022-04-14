@@ -10,7 +10,7 @@ syntax enable
 set fileencodings=utf-8,latin
 set encoding=utf-8
 
-" vim-plug: {{{
+" vim-plug:
 call plug#begin('~/AppData/Local/nvim/plugged')
  
 Plug 'OmniSharp/omnisharp-vim'
