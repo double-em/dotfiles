@@ -59,7 +59,7 @@ Plug 'bbenzikry/snazzybuddy.nvim'
 " Enable the color scheme
 colorscheme snazzybuddy
 
-all plug#end()
+call plug#end()
 
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
