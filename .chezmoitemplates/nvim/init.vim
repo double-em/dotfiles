@@ -149,7 +149,7 @@ augroup END
 lua <<EOF
 
 require('colorbuddy').colorscheme('snazzybuddy')
-
+vim.g.background = 'dark'
 vim.g.snazzybuddy_icons = true
 
 vim.opt.list = true
@@ -179,7 +179,7 @@ if has('termguicolors')
   set termguicolors
 endif
 
-set background=dark
+" set background=dark
 
 
 let g:OmniSharp_server_use_net6 = 1
