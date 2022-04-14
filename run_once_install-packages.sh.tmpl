@@ -1,0 +1,14 @@
+{{ if eq .chezmoi.os "arch" -}}
+#!/bin/sh
+sudo pacman -Syu \
+    base-devel \
+    cmake \
+    unzip \
+    ninja \
+    tree-sitter \
+    curl \
+    wget \
+    rust \
+    go
+{{ end -}}
+
