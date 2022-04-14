@@ -60,8 +60,6 @@ Plug 'bbenzikry/snazzybuddy.nvim'
 " Enable the color scheme
 colorscheme snazzybuddy
 
-call plug#end()
-
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
@@ -81,6 +79,8 @@ for i = 1, 7 do
 end
 
 vim.g.indent_blankline_char_highlight_list = indent_colors
+
+call plug#end()
 
 " Settings:
 filetype indent plugin on
