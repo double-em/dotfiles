@@ -57,9 +57,8 @@ Plug 'bbenzikry/snazzybuddy.nvim'
 colorscheme snazzybuddy
 
 call plug#end()
-" }}}
 
-" Settings: {{{
+" Settings:
 filetype indent plugin on
 set relativenumber
 set number
@@ -125,15 +124,13 @@ set formatoptions+=r
 " set mouse=a
 set lazyredraw
 
-" }}}
-
 au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#emmet#get_source_options({
     \ 'name': 'emmet',
     \ 'whitelist': ['html'],
     \ 'completor': function('asyncomplete#sources#emmet#completor'),
     \ }))
 
-" Colors: {{{
+" Colors:
 augroup ColorschemePreferences
   autocmd!
   " These preferences clear some gruvbox background colours, allowing transparency
@@ -152,7 +149,7 @@ if has('termguicolors')
 endif
 
 set background=dark
-" }}}
+
 
 let g:OmniSharp_server_use_net6 = 1
 
@@ -163,7 +160,7 @@ let g:OmniSharp_diagnostic_exclude_paths = [
 \ '\<AssemblyInfo\.cs\>'
 \]
 
-" ALE: {{{
+" ALE:
 let g:ale_sign_error = '•'
 let g:ale_sign_warning = '•'
 let g:ale_sign_info = '·'
@@ -176,14 +173,12 @@ let g:ale_linters = { 'cs': ['OmniSharp'] }
 "    \ 'name': 'reason',
 "    \ 'linter': 'flow',
 "    \ })
-" }}}
 
-" Asyncomplete: {{{
+" Asyncomplete:
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
-" }}}
 
-" Sharpenup: {{{
+" Sharpenup:
 " All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
 " :OmniSharpGotoDefinition
 let g:sharpenup_map_prefix = '<Space>os'
@@ -233,7 +228,6 @@ augroup OmniSharpIntegrations
   autocmd FileType cs nmap <silent> <buffer> <Leader>osst <Plug>(omnisharp_start_server)
   autocmd FileType cs nmap <silent> <buffer> <Leader>ossp <Plug>(omnisharp_stop_server)
 augroup END
-" }}}
 
 inoremap jk <Esc>
 vnoremap jk <Esc>
@@ -241,7 +235,7 @@ cnoremap jk <C-C>
 nnoremap <silent> <C-k><C-B> :NERDTreeToggle<CR>
 nmap <leader>nf :NERDTreeFind<CR>
 
-" Lightline: {{{
+" Lightline:
 let g:lightline = {
 \ 'colorscheme': 'gruvbox',
 \ 'active': {
@@ -278,10 +272,8 @@ let g:lightline#ale#indicator_infos = "\uf129 "
 let g:lightline#ale#indicator_warnings = "\uf071 "
 let g:lightline#ale#indicator_errors = "\uf05e "
 let g:lightline#ale#indicator_ok = "\uf00c "
-" }}}
 
-" OmniSharp: {{{
-
+" OmniSharp:
 autocmd User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#omni#get_source_options({
 \ 'name': 'omni',
 \ 'allowlist': ['*'],
@@ -335,4 +327,3 @@ endif
 let g:OmniSharp_highlight_groups = {
 \ 'ExcludedCode': 'NonText'
 \}
-" }}}
