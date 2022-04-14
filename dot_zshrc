@@ -76,8 +76,6 @@ zinit ice as"program" atclone"cargo install bat --root $ZPFX/bin/bat" atpull"%at
     pick"$ZPFX/bin/bat/bin/bat"
 zinit load sharkdp/bat
 
-Plug 'tjdevries/colorbuddy.nvim
-Plug 'bbenzikry/snazzybuddy.nvim
 
 # zinit ice src"unixorn/fzf-zsh-plugin.git" from"gh" as"command"
 # zinit load unixorn/fzf-zsh-plugin
