@@ -147,39 +147,46 @@ augroup ColorschemePreferences
   autocmd ColorScheme * highlight link ALEInfoSign    Identifier
 augroup END
 
+lua <<EOF
+
+require('colorbuddy').colorscheme('snazzybuddy')
+
+vim.g.snazzybuddy_icons = true
+
 vim.opt.list = true
 vim.opt.listchars:append("space:⋅")
 vim.opt.listchars:append("eol:↴")
 
-let g:indent_blankline_show_current_context = v:true
-let g:indent_blankline_show_current_context_start = v:true
-let g:indent_blankline_space_char_blankline = ' '
-let g:indent_blankline_space_char_highlight_list = ['⋅']
-let g:indent_blankline_leading_space_char = '·'
+-- let g:indent_blankline_show_current_context = v:true
+-- let g:indent_blankline_show_current_context_start = v:true
+-- let g:indent_blankline_space_char_blankline = ' '
+-- let g:indent_blankline_space_char_highlight_list = ['⋅']
+-- let g:indent_blankline_leading_space_char = '·'
 
-let g:snazzybuddy_icons = v:true
+-- let g:snazzybuddy_icons = v:true
+-- 
+-- local indent_colors = {}
+-- for i = 1, 7 do
+--     table.insert(indent_colors, 'SnazzyIndent' .. i)
+-- end
+-- 
+-- let g:indent_blankline_char_highlight_list = indent_colors
+
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+
+-- Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
 local indent_colors = {}
 for i = 1, 7 do
     table.insert(indent_colors, 'SnazzyIndent' .. i)
-:endfor
+end
 
-let g:indent_blankline_char_highlight_list = indent_colors
+vim.g.indent_blankline_char_highlight_list = indent_colors
 
-" require("indent_blankline").setup {
-"     space_char_blankline = " ",
-"     show_current_context = true,
-"     show_current_context_start = true,
-" }
-" 
-" let g:snazzybuddy_icons = v:true
-" 
-" " Add SnazzyIndent1 - SnazzyIndent7 to indent_blankline
-" local indent_colors = {}
-" for i = 1, 7 do
-"     table.insert(indent_colors, 'SnazzyIndent' .. i)
-" end
-" 
-" vim.g.indent_blankline_char_highlight_list = indent_colors
+EOF
 
 " Use truecolor in the terminal, when it is supported
 if has('termguicolors')
