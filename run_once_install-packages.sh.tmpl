@@ -1,5 +1,6 @@
-{{ if eq .chezmoi.os "arch" -}}
 #!/bin/sh
+
+{{ if eq .chezmoi.os "arch" -}}
 sudo pacman -Syu \
     base-devel \
     cmake \
