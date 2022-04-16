@@ -1,5 +1,5 @@
 # dotfiles
-My personal dotfiles setup across my machines
+My personal dotfiles setup.
 
 ## Prerequisites
 - [WSL2](https://docs.microsoft.com/en-us/windows/wsl/install)
