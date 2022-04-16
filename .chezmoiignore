@@ -7,4 +7,6 @@ Documents
 
 {{- if ne .chezmoi.os "linux" }}
 dot_config
+dot_bashrc
+dot_zshrc
 {{- end }}
