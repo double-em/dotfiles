@@ -10,5 +10,23 @@ sudo pacman -Syu \
     curl \
     wget \
     rust \
-    go
+    go \
+    ruby \
+    python \
+    neofetch \
+    perl \
+    starship \
+    svn \
+    exa \
+    bat \
+    jq \
+    neovim \
+    zsh
+
+python -m ensurepip --upgrade
+python -m pip install --user --upgrade pynvim
+
+# zinit
+sh -c "$(curl -fsSL https://git.io/zinit-install)"
+
 {{ end -}}

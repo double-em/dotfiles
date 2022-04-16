@@ -26,8 +26,9 @@ chezmoi update
 setopt promptsubst
 PS1="READY >" # provide a simple prompt till the theme loads
 
-zinit wait'!' lucid for \
+zinit light-mode wait'!' lucid for \
     OMZL::prompt_info_functions.zsh
+
 
 zinit light-mode wait lucid for \
   atinit"zicompinit; zicdreplay" \
@@ -38,12 +39,12 @@ zinit light-mode wait lucid for \
   blockf atpull'zinit creinstall -q .' \
       zsh-users/zsh-completions
 
-zinit load agkozak/zsh-z
+zinit light agkozak/zsh-z
 
 # zinit wait pack for svn
 
-zinit ice wait svn
-zinit snippet OMZP::gitfast
+# zinit ice wait svn lucid
+# zinit snippet OMZP::gitfast
 
 zinit light-mode wait lucid for \
     OMZP::npm \
@@ -57,29 +58,18 @@ zinit light-mode wait lucid for \
 # Plugin history-search-multi-word loaded with investigating.
 zinit light-mode wait'!' lucid for \
     zdharma-continuum/history-search-multi-word \
-    zsh-users/zsh-autosuggestions \
-    spaceship-prompt/spaceship-prompt \
     ptavares/zsh-exa
+    # spaceship-prompt/spaceship-prompt \
 # zinit snippet https://gist.githubusercontent.com/hightemp/5071909/raw/
 
-zinit ice wait'!' as"program" atclone"rm -rf build" \
+zinit ice wait'!' lucid as"program" atclone"rm -rf build" \
     atpull"%atclone" \
     make"CMAKE_BUILD_TYPE=Release CMAKE_INSTALL_PREFIX=$ZPFX/bin/nvim install" pick"$ZPFX/bin/nvim/bin/nvim"
-zinit load neovim/neovim
-
-zinit ice wait as"program" atinit"chezmoi init --apply https://github.com/double-em/dotfiles.git" \
-    make"PREFIX=$ZPFX install" pick"$ZPFX/bin/chezmoi/bin/chezmoi"
-zinit load twpayne/chezmoi
-
-# cargo install --locked bat
-zinit ice as"program" atclone"cargo install bat --root $ZPFX/bin/bat" atpull"%atclone" \
-    pick"$ZPFX/bin/bat/bin/bat"
-zinit load sharkdp/bat
-
+zinit light neovim/neovim
 
 # zinit ice src"unixorn/fzf-zsh-plugin.git" from"gh" as"command"
 # zinit load unixorn/fzf-zsh-plugin
-zinit wait'!' pack for fzy
+zinit light-mode wait'!' lucid pack for fzy
 
 eval "$(starship init zsh)"
 function set_win_title(){
@@ -290,6 +280,7 @@ alias upd="/usr/bin/update"
 
 alias ls='exa -lGF'
 alias l='exa -alGF'
+alias ll='exa -alGF'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='bat'
