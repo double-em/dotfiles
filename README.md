@@ -7,8 +7,13 @@ My personal dotfiles setup.
   - Git (Apart of `sudo pacman -S base-devel`)
   - [Chezmoi](https://www.chezmoi.io)
 
-## Good to know
-- Set default shell:  
+## Quick Start
+```shell
+chezmoi init https://github.com/double-em/dotfiles.git
+```
+
+## Nice to know
+- Set default shell in Linux:  
   `sudo usermod --shell /bin/zsh <username>` or `chsh -s /bin/zsh <username>`
 - Set default distro for WSL:  
   `wsl --set-default <distro>`
