@@ -2,19 +2,22 @@
 Set-Alias vim nvim
 Set-Alias vi nvim
 
-
 Set-Alias -Name ls -Value Get-ChildItem
 Set-Alias l ls
 
-function list_all {Get-ChildItem -Force}
-Set-Alias -Name ll -Value list_all
+function ListAll {Get-ChildItem -Force}
+Set-Alias -Name ll -Value ListAll
 
 Set-Alias g git
 Set-Alias grep findstr
 
-function go_back_up($levels) {
+function Location-Back {
+    param (
+        [int]$Levels
+    )
+
     $path = ".."
-    for ($i = 0; $i -lt $levels; $i++)
+    for ($i = 1; $i -lt $Levels; $i++)
     {
         $path = $path + "\.."
     }
@@ -22,7 +25,22 @@ function go_back_up($levels) {
     Set-Location -Path $path
 }
 
-Set-Alias -Name .... -Value go_back_up(2)
+function Back1 {Location-Back 1}
+function Back2 {Location-Back 2}
+function Back3 {Location-Back 3}
+function Back4 {Location-Back 4}
+function Back5 {Location-Back 5}
+function Back6 {Location-Back 6}
+
+Set-Alias -Name .. -Value Back1
+Set-Alias -Name .... -Value Back2
+Set-Alias -Name ...... -Value Back3
+Set-Alias -Name ........ -Value Back4
+Set-Alias -Name .......... -Value Back5
+Set-Alias -Name ............ -Value Back6
+
+function UpdateProfile {chezmoi apply; & $PROFILE}
+Set-Alias -Name update -Value UpdateProfile
 
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme spaceship
