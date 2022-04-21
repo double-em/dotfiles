@@ -1,10 +1,28 @@
 # Alias
 Set-Alias vim nvim
 Set-Alias vi nvim
-Set-Alias ll ls
+
+
+Set-Alias -Name ls -Value Get-ChildItem
 Set-Alias l ls
+
+function list_all {Get-ChildItem -Force}
+Set-Alias -Name ll -Value list_all
+
 Set-Alias g git
 Set-Alias grep findstr
+
+function go_back_up($levels) {
+    $path = ".."
+    for ($i = 0; $i -lt $levels; $i++)
+    {
+        $path = $path + "\.."
+    }
+
+    Set-Location -Path $path
+}
+
+Set-Alias -Name .... -Value go_back_up(2)
 
 Import-Module oh-my-posh
 Set-PoshPrompt -Theme spaceship
