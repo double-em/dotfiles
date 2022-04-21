@@ -1,4 +1,6 @@
+{{ if ne .chezmoi.os "windows" -}}
 #!/bin/sh
+{{ end -}}
 
 {{ if eq .chezmoi.os "arch" -}}
 sudo pacman -Syu \
