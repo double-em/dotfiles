@@ -1,3 +1,5 @@
+chezmoi update
+
 # Alias
 Set-Alias vim nvim
 Set-Alias vi nvim
@@ -9,6 +11,8 @@ function ListAll {Get-ChildItem -Force}
 Set-Alias -Name ll -Value ListAll
 
 Set-Alias g git
+function CommitAll ($Message) {git add .; git commit -m $Message}
+Set-Alias -Name ga -Value CommitAll
 Set-Alias grep findstr
 
 function Location-Back {
