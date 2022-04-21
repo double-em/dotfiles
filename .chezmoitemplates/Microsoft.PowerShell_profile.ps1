@@ -1,4 +1,4 @@
-chezmoi update
+chezmoi update; & $PROFILE
 
 # Alias
 Set-Alias vim nvim
