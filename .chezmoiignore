@@ -9,4 +9,5 @@ Documents
 dot_config
 dot_bashrc
 dot_zshrc
+scripts
 {{- end }}
