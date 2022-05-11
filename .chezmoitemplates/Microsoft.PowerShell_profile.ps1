@@ -51,6 +51,8 @@ Set-PoshPrompt -Theme spaceship
 
 Import-Module -Name Terminal-Icons
 
+Import-Module posh-git
+
 # PSReadLine
 Set-PSReadLineOption -EditMode Emacs
 Set-PSReadLineOption -BellStyle None
