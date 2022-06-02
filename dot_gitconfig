@@ -8,3 +8,9 @@
         st = status
         a = add
         all = commit -am
+
+[credential]
+	helper = /usr/lib/share/git-credential-manager-core/git-credential-manag
+	credentialStore = cache
+[credential "https://dev.azure.com"]
+	useHttpPath = true 
