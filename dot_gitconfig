@@ -10,7 +10,8 @@
         all = commit -am
 
 [credential]
-	helper = /usr/lib/share/git-credential-manager-core/git-credential-manag
-	credentialStore = cache
+    helper = /usr/lib/share/git-credential-manager-core/git-credential-manager
+    credentialStore = cache
 [credential "https://dev.azure.com"]
-	useHttpPath = true 
+    useHttpPath = true
+
