@@ -3,6 +3,7 @@ README.md
 {{- if ne .chezmoi.os "windows" }}
 AppData
 Documents
+OneDrive - Industrial Automation
 {{- end }}
 
 {{- if ne .chezmoi.os "linux" }}
