@@ -1,3 +1,5 @@
+#!/bin/sh
+
 sudo pacman -S podman podman-docker podman-dnsname buildah fuse-overlayfs;
 
 sysctl kernel.unprivileged_userns_clone
