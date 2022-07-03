@@ -1,15 +1,16 @@
 #!/bin/sh
-{{ if eq .chezmoi.os "arch" -}}
 
-sudo pacman -S podman podman-docker podman-dnsname buildah fuse-overlayfs;
+#{{ if eq .chezmoi.os "arch" -}}
 
-sysctl kernel.unprivileged_userns_clone
+#sudo pacman -S podman podman-docker podman-dnsname buildah fuse-overlayfs;
 
-sudo touch /etc/subuid /etc/subgid
+#sysctl kernel.unprivileged_userns_clone
 
-USERNAME=$(whoami)
-sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USERNAME
+#sudo touch /etc/subuid /etc/subgid
 
-podman system migrate
+#USERNAME=$(whoami)
+#sudo usermod --add-subuids 100000-165535 --add-subgids 100000-165535 $USERNAME
 
-{{ end -}}
+#:podman system migrate
+
+#{{ end -}}
