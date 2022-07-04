@@ -282,7 +282,7 @@ alias l='exa -alGF'
 alias ll='exa -alGF'
 alias vi='nvim'
 alias vim='nvim'
-alias cat='bat'
+alias cat='batcat'
 alias docker='podman'
 
 # Replace yay with paru if installed
