@@ -168,7 +168,7 @@ for i = 1, 7 do
     table.insert(indent_colors, 'SnazzyIndent' .. i)
 end
 
-vim.g.indent_blankline_char_highlight_list = indent_colors
+-- vim.g.indent_blankline_char_highlight_list = indent_colors
 
 EOF
 
