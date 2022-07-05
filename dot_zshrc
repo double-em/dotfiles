@@ -282,7 +282,11 @@ alias l='exa -alGF'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='batcat'
-alias cda="cd $(which dotnet | xargs dirname | sed -r '/[\n\.]/d')"
+alias cda=change_to_file_dir()
+
+change_to_file_dir() {
+    cd $(which "$1" | xargs dirname | sed -r '/[\n\.]/d')
+}
 
 # Replace yay with paru if installed
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
