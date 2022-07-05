@@ -295,16 +295,7 @@ if [ -d "$HOME/adb-fastboot/platform-tools" ] ; then
  export PATH="$HOME/adb-fastboot/platform-tools:$PATH"
 fi
 
-export IDEA_HOME=~/path/to/idea
-
-export SENSUM_ARTIFACTORY_API_KEY=AKCp8mZTLMTbsz3VndZacdow3NzrjGeaU6g6tu9W3Lop1wccgtTu6Yp7tEB8jVQ3EhAitiR3e
-export JAVA_11_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
-
-export EDITOR=nvim
-
-alias sensum='export SENSUM_ROOT=~/workspace/sensum && cd ${SENSUM_ROOT} && source bin/environment'
-
-export SENSUM_ROOT=/home/mihom/workspace/sensum && source /home/mihom/workspace/sensum/bin/environment
+source .bash_aliases
 
 ## Run neofetch
 neofetch
