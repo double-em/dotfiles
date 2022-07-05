@@ -279,7 +279,6 @@ alias upd="/usr/bin/update"
 
 alias ls='exa -lGF'
 alias l='exa -alGF'
-alias ll='exa -alGF'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='batcat'
