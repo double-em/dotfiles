@@ -283,7 +283,6 @@ alias ll='exa -alGF'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='batcat'
-alias docker='podman'
 
 # Replace yay with paru if installed
 [ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
