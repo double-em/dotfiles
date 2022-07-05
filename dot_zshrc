@@ -285,7 +285,7 @@ alias cat='batcat'
 alias cda=change_to_file_dir()
 
 change_to_file_dir() {
-    cd $(which "$1" | xargs dirname | sed -r '/[\n\.]/d')
+    cd $(which $1 | xargs dirname | sed -r '/[\n\.]/d' | sed 's/[{}]//g')
 }
 
 # Replace yay with paru if installed
