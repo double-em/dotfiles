@@ -1,6 +1,6 @@
 source .bash_aliases
 
-alias ll='exa -alGF'
+alias ll='exa -alFhHS@'
 
 #### Added by Zinit's installer
 if [[ ! -f $HOME/.local/share/zinit/zinit.git/zinit.zsh ]]; then
@@ -281,8 +281,8 @@ alias pacdiff='sudo -H DIFFPROG=meld pacdiff'
 alias tb='nc termbin.com 9999'
 alias upd="/usr/bin/update"
 
-alias ls='exa -lGF'
-alias l='exa -alGF'
+alias ls='exa -lFhHS@'
+alias l='ls'
 alias vi='nvim'
 alias vim='nvim'
 alias cat='batcat'
