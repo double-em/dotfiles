@@ -301,6 +301,6 @@ fi
 
 
 ## Run neofetch
-neofetch
+# neofetch
 
 
