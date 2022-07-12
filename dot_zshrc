@@ -134,7 +134,14 @@ SAVEHIST=10000
 
 ## Keys
 # Use emacs key bindings
+# Ctrl = '^', Alt = '^['
 bindkey -e
+
+bindkey '^[n' autosuggest-accept
+bindkey '^[c' up-line-or-history
+bindkey '^[t' down-line-or-history
+bindkey '^[d' beginning-of-line
+bindkey '^[s' end-of-line
 
 # [PageUp] - Up a line of history
 if [[ -n "${terminfo[kpp]}" ]]; then
