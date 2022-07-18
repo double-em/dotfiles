@@ -77,7 +77,7 @@ zinit light-mode wait'!' lucid pack for fzy
 
 eval "$(starship init zsh)"
 function set_win_title(){
-    echo -ne "\033]0; $USER@$HOST:${PWD/$HOME/~} \007"
+    echo -ne "\033]0; $USER:${PWD/$HOME/~} \007"
 }
 
 precmd_functions+=(set_win_title)
@@ -93,9 +93,10 @@ precmd_functions+=(set_win_title)
 # Advanced command-not-found hook
 [[ -e /usr/share/doc/find-the-command/ftc.zsh ]] && source /usr/share/doc/find-the-command/ftc.zsh
 
+eval $(thefuck --alias)
 
 ## Options section
-setopt correct                                                  # Auto correct mistakes
+# setopt correct                                                  # Auto correct mistakes
 setopt extendedglob                                             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob                                               # Case insensitive globbing
 setopt rcexpandparam                                            # Array expension with parameters
@@ -309,5 +310,3 @@ fi
 
 ## Run neofetch
 # neofetch
-
-
