@@ -25,7 +25,7 @@ zinit light-mode for \
 
 ## End of Zinit's installer chunk
 
-chezmoi update &> /dev/null
+chezmoi update # &> /dev/null
 
 setopt promptsubst
 PS1="READY >" # provide a simple prompt till the theme loads
@@ -310,3 +310,10 @@ fi
 
 ## Run neofetch
 # neofetch
+
+# bun completions
+[ -s "/home/mihom/.bun/_bun" ] && source "/home/mihom/.bun/_bun"
+
+# bun
+export BUN_INSTALL="/home/mihom/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
