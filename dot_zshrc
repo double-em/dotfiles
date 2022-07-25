@@ -295,6 +295,8 @@ alias vi='nvim'
 alias vim='nvim'
 alias cat='batcat'
 alias cda=change_to_file_dir()
+alias apt-get='apt-fast'
+alias apt='apt-fast'
 
 change_to_file_dir() {
     cd $(which $1 | xargs dirname | sed -r '/[\n\.]/d' | sed 's/[{}]//g')
